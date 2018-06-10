@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_subject_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.farouk.jackretary.SubjectList"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/holo_green_dark"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:src="@drawable/eduserieslogo"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3" />
+
+
+            <TextView
+                android:text="Jackretary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_marginTop="20dp"
+                android:enabled="true"
+                style="@android:style/Widget.Holo.TextView"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_weight="0.14"
+                android:layout_marginLeft="50dp"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:text="Subjects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/topic"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/background_light" />
+
+            <ImageButton
+                android:src="@android:drawable/ic_menu_more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton2"
+                android:scrollbarStyle="outsideOverlay"
+                style="@android:style/Widget.Holo.Button.Borderless" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/subjectList"
+            android:layout_weight="0.92" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearAdd"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/addSubject"
+                android:hint="Enter a new subject name"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:src="@android:drawable/btn_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelAdd"
+                android:layout_weight="0.09"
+                android:onClick="onCancelAdd"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:text="Add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add"
+                android:layout_weight="0.91"
+                android:onClick="onAdd"
+                style="@android:style/Widget.Holo.Button" />
+
+            <Button
+                android:text="Remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remove"
+                android:layout_weight="0.66"
+                android:onClick="onRemove"
+                style="@android:style/Widget.Holo.Button" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
